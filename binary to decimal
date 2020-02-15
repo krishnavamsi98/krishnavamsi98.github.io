@@ -1,0 +1,40 @@
+coverting binary to decimal
+code:
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+	
+    long num,dec;
+    int i,sum,rem;
+
+	scanf("%ld",&num);
+  	
+
+    
+      i=0;
+      sum=0;
+  while(num>0)
+  {	
+    rem=num%10;
+    if(rem==1)
+    {
+      sum=sum+1*pow(2,i);
+      i=i+1;
+	}
+    else
+       i=i+1;
+    num=num/10;
+        
+  }
+  if(num==0)
+  {
+    dec=0;
+  }
+	dec=sum;
+
+    printf("%ld",dec);
+
+	
+	return 0;
+}
